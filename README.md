@@ -25,7 +25,18 @@ Controls how many spaces per `:$level` the output receives when `:$pretty` is `T
 Why `JSON::Fast`?  Because its `to-json` performance was roughly equivalent to the built-in.
 
 ```
-
+Benchmark:
+Timing 3 iterations of JSON::Fast, JSON::Faster...
+JSON::Fast: 275.7765 wallclock secs @ 0.0109/s (n=3)
+    (warning: too few iterations for a reliable count)
+JSON::Faster: 6.5764 wallclock secs @ 0.4562/s (n=3)
+    (warning: too few iterations for a reliable count)
+O--------------O--------O--------------O------------O
+|              | s/iter | JSON::Faster | JSON::Fast |
+O==============O========O==============O============O
+| JSON::Faster | 2.19   | --           | 4093%      |
+| JSON::Fast   | 91.9   | -98%         | --         |
+-----------------------------------------------------
 ```
 
 ##Benchmark of `pretty` output vs `!pretty`
