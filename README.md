@@ -22,7 +22,7 @@ Controls how many spaces per `:$level` the output receives when `:$pretty` is `T
 
 ##Benchmark vs JSON::Fast
 
-Why `JSON::Fast`?  Because its `to-json` performance was roughly equivalent to the built-in.
+Why `JSON::Fast`?  Because its `to-json` performance was roughly equivalent to the built-in.  Why only 3 iterations?  Because I'm impatient.
 
 ```
 Benchmark:
