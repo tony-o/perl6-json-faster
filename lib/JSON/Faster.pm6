@@ -5,8 +5,8 @@ sub to-json($obj, Bool :$pretty? = True, Int :$level? = 0, Int :$spacing? = 2) i
   return "{$obj}"     if $obj ~~ Int || $obj ~~ Rat;
   return "\"{$obj.subst(/'"'/, '\\"', :g)}\"" if $obj ~~ Str;
 
-  my Str  $out = '';
-  my Int  $lvl = $level;
+  my str  $out = '';
+  my int  $lvl = $level;
   my Bool $arr = $obj ~~ Array;
   my $spacer   = sub {
     $out ~= "\n" ~ (' ' x $lvl*$spacing) if $pretty;
