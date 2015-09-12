@@ -4,7 +4,7 @@
     "version"     : "*",
     "description" : "[Much] faster to-json function.",
     "provides"    : {
-        "JSON::Faster" : "lib/JSON/Faster.pm6",
+        "JSON::Faster" : "lib/JSON/Faster.pm6"
     },
     "auth"    : "github:tony-o",
     "authors" : [
